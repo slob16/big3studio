@@ -1,0 +1,92 @@
+﻿/* Slimmer & Modern Accordion Styles for Work Section */
+#workAccordion .panel {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 6px;
+}
+
+#workAccordion .panel-heading {
+    background: #19180a;
+    border-radius: 6px;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+#workAccordion .panel-title {
+    display: flex;
+    align-items: center;
+}
+
+#workAccordion .panel-title a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ff8811;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 12px 18px;
+    text-decoration: none;
+    border-radius: 6px;
+    background: transparent;
+    transition: background 0.2s, color 0.2s;
+    min-height: 0;
+    letter-spacing: 0.5px;
+}
+
+#workAccordion .panel-title a .accordion-icon {
+    font-size: 1.3em;
+    margin-left: 14px;
+    color: #ff8811;
+    transition: color 0.2s;
+}
+
+#workAccordion .panel-title a[aria-expanded="true"],
+#workAccordion .panel-title a:hover {
+    background: #ff8811;
+    color: #19180a;
+}
+
+#workAccordion .panel-title a[aria-expanded="true"] .accordion-icon,
+#workAccordion .panel-title a:hover .accordion-icon {
+    color: #19180a;
+}
+
+#workAccordion .panel-collapse {
+    background: #181818;
+    border-radius: 0 0 6px 6px;
+}
+
+#workAccordion .panel-body {
+    padding: 14px 18px;
+    color: #f7ece1;
+    font-size: 0.98em;
+    border-top: 1px solid #ff8811;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    #workAccordion .panel-title a,
+    #workAccordion .panel-body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #workAccordion .panel-title a {
+        font-size: 0.98em;
+    }
+    #workAccordion .panel-title a {
+    position: relative;
+}
+
+#workAccordion .accordion-chevron {
+    font-size: 1.2em;
+    margin-left: 10px;
+    color: #ff8811;
+    transition: transform 0.3s, color 0.2s;
+}
+
+#workAccordion .panel-title a[aria-expanded="true"] .accordion-chevron {
+    transform: rotate(180deg);
+    color: #19180a;
+}
+}
