@@ -1714,8 +1714,8 @@ div.mfp-wrap {
 .modal-content {
 	border: 0px solid transparent;
 	border-radius: 0;
-	-webkit-box-shadow: 0 0 0 rgba(0,0,0,.5);
-	box-shadow: 0 0 0 rgba(0,0,0,.5);
+	-webkit-box-shadow: 0 0 0 rgba(25,24,10,.5);
+	box-shadow: 0 0 0 rgba(25,24,10,.5);
 }
 
 .mfp-close-btn-in .mfp-ajax-holder .mfp-close {
@@ -1805,7 +1805,7 @@ div.pswp__top-bar,
 div.pswp__caption,
 div.pswp__ui--fit .pswp__top-bar,
 div.pswp__ui--fit .pswp__caption {
-	background: rgba(0,0,0,0.3);
+	background: rgba(25,24,10,0.3);
 }
 
 div.pswp__caption__center {
@@ -2513,7 +2513,7 @@ div.pswp__caption__center {
 .play-button.dark {
 	border-color: #19180A;
 	color: #19180A;
-	background: rgba(0,0,0,.13);
+	background: rgba(25,24,10,.13);
 	box-shadow: 0 0 0 7px rgba(0,20,0,.13);
 }
 
@@ -2544,8 +2544,8 @@ div.pswp__caption__center {
 	overflow: hidden;
     margin-bottom: 30px;
 	background: #f7ece1;
-	-webkit-box-shadow: 0 7px 40px rgba(0,0,0,.07);
-	box-shadow: 0 7px 40px rgba(0,0,0,.07);
+	-webkit-box-shadow: 0 7px 40px rgba(25,24,10,.07);
+	box-shadow: 0 7px 40px rgba(25,24,10,.07);
 	cursor: pointer;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -3066,7 +3066,7 @@ button.slick-next.slick-disabled {
 }
 
 .img-shadow {
-	box-shadow: 0 7px 40px rgba(0,0,0,.09)
+	box-shadow: 0 7px 40px rgba(25,24,10,.09)
 }
 
 .img-md {
@@ -6202,22 +6202,22 @@ body.mobile .mobile-hidden {
 	
 	.main-header.header-mobile-semilight {
 		background-color: rgba(255,255,255,0.97);
-		box-shadow: 0 0 54px rgba(0,0,0,.073);
+		box-shadow: 0 0 54px rgba(25,24,10,.073);
 	}
 	
 	.main-header.header-mobile-light {
 		background-color: #f7ece1;
-		box-shadow: 0 0 54px rgba(0,0,0,.073);
+		box-shadow: 0 0 54px rgba(25,24,10,.073);
 	}
 
 	.main-header.header-mobile-semidark {
-		background-color: rgba(0,0,0,0.93);
-		box-shadow: 0 0 54px rgba(0,0,0,.073);
+		background-color: rgba(25,24,10,0.93);
+		box-shadow: 0 0 54px rgba(25,24,10,.073);
 	}
 	
 	.main-header.header-mobile-dark {
 		background-color: #000;
-		box-shadow: 0 0 54px rgba(0,0,0,.073);
+		box-shadow: 0 0 54px rgba(25,24,10,.073);
 	}
 
 	.main-header.menu-mobile-light .header-nav li a {
@@ -6272,12 +6272,12 @@ body.mobile .mobile-hidden {
 	/* Footer Color Styles */
 	.site-footer.footer-mobile-light {
 		background-color: #f7ece1;
-		box-shadow: 0 0 54px rgba(0,0,0,.073);
+		box-shadow: 0 0 54px rgba(25,24,10,.073);
 	}
 
 	.site-footer.footer-mobile-dark {
 		background-color: #000;
-		box-shadow: 0 0 54px rgba(0,0,0,.073);
+		box-shadow: 0 0 54px rgba(25,24,10,.073);
 	}
 	
 	.site-footer.footer-mobile-content-light,
