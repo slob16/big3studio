@@ -687,7 +687,7 @@ ul {
 .site-footer .social-icon i,
 .site-footer .social-icon:hover,
 .site-footer .social-icon:hover i {
-	color: #19180A;
+	color: #ff8811;
 }
 
 
@@ -1536,7 +1536,7 @@ fieldset[disabled] .form-control {
 }
 
 .social-icon i {
-	color: #777;
+	color: #ff8811;
 	transition: all 0.3s ease;
 	-webkit-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
@@ -1562,7 +1562,7 @@ fieldset[disabled] .form-control {
 .socials-icons.dark .social-icon i ,
 .socials-icons.dark .social-icon:hover,
 .socials-icons.dark .social-icon:hover i {
-	color: #19180A;
+	color: #f7ece1;
 }
 
 /*------------------------------------------------------------------
@@ -6105,14 +6105,14 @@ body.mobile .mobile-hidden {
 	.site-footer.footer-content-light .social-icon i,
 	.site-footer.footer-content-light .social-icon:hover,
 	.site-footer.footer-content-light .social-icon:hover i {
-		color: #19180a;
+		color: #ff8811;
 	}
 	
 	.site-footer.footer-content-dark,
 	.site-footer.footer-content-dark .social-icon i,
 	.site-footer.footer-content-dark .social-icon:hover,
 	.site-footer.footer-content-dark .social-icon:hover i {
-		color: #19180A;
+		color: #ff8811;
 	}
 	
 	/* Overlay */
