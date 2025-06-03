@@ -6276,7 +6276,7 @@ body.mobile .mobile-hidden {
 	}
 
 	.site-footer.footer-mobile-dark {
-		background-color: #000;
+		background-color: #19180a;
 		box-shadow: 0 0 54px rgba(25,24,10,.073);
 	}
 	
@@ -6284,14 +6284,14 @@ body.mobile .mobile-hidden {
 	.site-footer.footer-mobile-content-light .social-icon i,
 	.site-footer.footer-mobile-content-light .social-icon:hover,
 	.site-footer.footer-mobile-content-light .social-icon:hover i {
-		color: #f7ece1;
+		color: #191801;
 	}
 	
 	.site-footer.footer-mobile-content-dark,
 	.site-footer.footer-mobile-content-dark .social-icon i,
 	.site-footer.footer-mobile-content-dark .social-icon:hover,
 	.site-footer.footer-mobile-content-dark .social-icon:hover i {
-		color: #19180A;
+		color: #f7ece1;
 	}
 	
 	/* Typography */
