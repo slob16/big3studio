@@ -535,41 +535,40 @@ We’re committed to sustainability, inclusion, and ethical practices across eve
 			</div>
 
 		</div>
+<!-- All JS files -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/photoswipe.min.js"></script>
+<script type="text/javascript" src="js/photoswipe-ui-default.min.js"></script>
+<script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
+<script type="text/javascript" src="js/animated-gradient.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 
-		<!-- JS -->
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/plugins.js"></script>
-		<script type="text/javascript" src="js/photoswipe.min.js"></script>
-		<script type="text/javascript" src="js/photoswipe-ui-default.min.js"></script>
-		<script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
-		<script type="text/javascript" src="js/animated-gradient.js"></script>
-
-		<script type="text/javascript" src="js/main.js"></script>
-
+<!-- ✅ AJAX Subscribe Script -->
 <script>
   $(document).ready(function () {
     $("#mc-form").submit(function (e) {
       e.preventDefault();
 
-      var email = $("input[name='email']").val();
-      var $result = $(".subscribe-result");
+      const email = $("input[name='email']").val().trim();
+      const $result = $(".subscribe-result");
 
-      // Clear previous message
-      $result.text("");
+      if (!email) {
+        $result.text("Please enter an email address.").css("color", "red");
+        return;
+      }
 
       $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbyc6KSfqzQFGmV8aL8OSD3-Mq3e4Yk3ljTxkAszEbkNmtOKPwqDcbrnUjZhL_zwKPzPlg/exec", // Replace this with your actual script URL
+        url: "https://script.google.com/macros/s/AKfycbyc6KSfqzQFGmV8aL8OSD3-Mq3e4Yk3ljTxkAszEbkNmtOKPwqDcbrnUjZhL_zwKPzPlg/exec", // <-- Replace with your actual Web App URL
         method: "POST",
-        data: {
-          email: email
-        },
+        data: { email: email },
         success: function (response) {
           $result.text("✅ Thanks for subscribing!").css("color", "#0f0");
           $("#mc-form")[0].reset();
         },
-        error: function () {
-          $result.text("❌ There was an error. Please try again.").css("color", "#f00");
+        error: function (xhr, status, error) {
+          $result.text("❌ There was an error: " + xhr.responseText).css("color", "red");
         }
       });
     });
