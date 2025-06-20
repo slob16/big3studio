@@ -452,32 +452,35 @@ We’re committed to sustainability, inclusion, and ethical practices across eve
 			</footer>
 
 			<!-- Subscribe Modal -->
-			<div id="subscribe-modal" class="mfp-modal mfp-close-btn-white mfp-with-anim mfp-hide">
-				<div class="overlay">
-					<div class="overlay-wrapper">
-						<div class="overlay-inner cover-background" style="background-image: url('images/subscribebig.jpg');"></div>
-						<div class="overlay-inner background-dark-3 opacity-50"></div>
-					</div>
-				</div>
-				<div class="mfp-modal-content text-center pt-120 pb-120">
-					<div class="row">
-						<div class="col-md-10 col-md-offset-1">
-							<h2 class="heading-uppercase text-white font-normal">Subscribe</h2>
-						</div>
-					</div>
-					<div class="divider divider-alt divider-light divider-center"></div>
-					<p class="lead text-white mb-50">Be part of a bold new chapter in cinema. <br>Insider updates on our latest projects, opportunities to support and engage with our projects through our Fund.</p>
-					<form class="subscribe-form mb-0" method="post" id="mc-form">
-						<div class="row">
-							<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-8">
-								<input type="email" class="form-control dark" placeholder="Enter Your Email Address">
-								<button class="btn btn-white btn-shadow btn-noradius btn-fullwidth" type="submit" id="submit" name="submit">Subscribe</button>
-							</div>
-						</div>
-					</form>
-					<p class="subscribe-result text-white"></p>
-				</div>
-			</div>
+			<!-- Subscribe Modal -->
+<div id="subscribe-modal" class="mfp-modal mfp-close-btn-white mfp-with-anim mfp-hide">
+  <div class="overlay">
+    <div class="overlay-wrapper">
+      <div class="overlay-inner cover-background" style="background-image: url('images/subscribebig.jpg');"></div>
+      <div class="overlay-inner background-dark-3 opacity-50"></div>
+    </div>
+  </div>
+  <div class="mfp-modal-content text-center pt-120 pb-120">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2 class="heading-uppercase text-white font-normal">Subscribe</h2>
+      </div>
+    </div>
+    <div class="divider divider-alt divider-light divider-center"></div>
+    <p class="lead text-white mb-50">Be part of a bold new chapter in cinema. <br>Insider updates on our latest projects, opportunities to support and engage with our projects through our Fund.</p>
+
+    <!-- UPDATED FORM -->
+    <form class="subscribe-form mb-0" id="mc-form">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-8">
+          <input type="email" class="form-control dark" name="email" placeholder="Enter Your Email Address" required>
+          <button class="btn btn-white btn-shadow btn-noradius btn-fullwidth" type="submit">Subscribe</button>
+        </div>
+      </div>
+    </form>
+    <p class="subscribe-result text-white mt-3"></p>
+  </div>
+</div>
 			
 			<!-- Root element of PhotoSwipe. Must have class pswp. -->
 			<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -544,5 +547,33 @@ We’re committed to sustainability, inclusion, and ethical practices across eve
 
 		<script type="text/javascript" src="js/main.js"></script>
 
+<script>
+  $(document).ready(function () {
+    $("#mc-form").submit(function (e) {
+      e.preventDefault();
+
+      var email = $("input[name='email']").val();
+      var $result = $(".subscribe-result");
+
+      // Clear previous message
+      $result.text("");
+
+      $.ajax({
+        url: "https://script.google.com/macros/s/AKfycbyc6KSfqzQFGmV8aL8OSD3-Mq3e4Yk3ljTxkAszEbkNmtOKPwqDcbrnUjZhL_zwKPzPlg/exec", // Replace this with your actual script URL
+        method: "POST",
+        data: {
+          email: email
+        },
+        success: function (response) {
+          $result.text("✅ Thanks for subscribing!").css("color", "#0f0");
+          $("#mc-form")[0].reset();
+        },
+        error: function () {
+          $result.text("❌ There was an error. Please try again.").css("color", "#f00");
+        }
+      });
+    });
+  });
+</script>
 	</body>
 </html>
